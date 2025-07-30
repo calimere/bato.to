@@ -29,7 +29,7 @@ This project is a Python script designed to download manga chapters from the [Ba
 
 1. Run the Python script:
      ```bash
-     python script.py
+     python run.py
      ```
 2. Enter the series URL you want to download (or leave it blank to use the default URL).
 3. The script will download the chapters and create CBZ files in the `cbz` folder.
