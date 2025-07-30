@@ -1,67 +1,67 @@
 # Bato.to Downloader
 
-Ce projet est un script Python permettant de télécharger des chapitres de mangas depuis le site [Bato.to](https://bato.to), de sauvegarder les images localement, et de les convertir en fichiers CBZ.
+This project is a Python script designed to download manga chapters from the [Bato.to](https://bato.to) website, save the images locally, and convert them into CBZ files.
 
-## Fonctionnalités
+## Features
 
-- Extraction des liens de chapitres depuis une URL de série.
-- Téléchargement des images de chaque chapitre.
-- Création de fichiers CBZ pour chaque chapitre.
+- Extract chapter links from a series URL.
+- Download images for each chapter.
+- Create CBZ files for each chapter.
 
-## Prérequis
+## Prerequisites
 
 - Python 3.x
-- Les bibliothèques suivantes doivent être installées :
+- The following libraries must be installed:
     - `requests`
-    - `re` (inclus dans la bibliothèque standard)
-    - `os` (inclus dans la bibliothèque standard)
-    - `zipfile` (inclus dans la bibliothèque standard)
+    - `re` (included in the standard library)
+    - `os` (included in the standard library)
+    - `zipfile` (included in the standard library)
 
 ## Installation
 
-1. Clonez ce dépôt ou copiez le script dans un fichier local.
-2. Installez les dépendances nécessaires avec la commande suivante :
+1. Clone this repository or copy the script to a local file.
+2. Install the required dependencies using the following command:
      ```bash
      pip install requests
      ```
 
-## Utilisation
+## Usage
 
-1. Exécutez le script Python :
+1. Run the Python script:
      ```bash
      python script.py
      ```
-2. Entrez l'URL de la série que vous souhaitez télécharger (ou laissez vide pour utiliser l'URL par défaut).
-3. Le script téléchargera les chapitres et créera des fichiers CBZ dans le dossier `cbz`.
+2. Enter the series URL you want to download (or leave it blank to use the default URL).
+3. The script will download the chapters and create CBZ files in the `cbz` folder.
 
-## Structure du Code
+## Code Structure
 
-### Fonctions principales
+### Main Functions
 
 - **`extract_href_and_b_content(url)`**  
-    Extrait les liens des chapitres et leurs titres depuis une URL de série.
+    Extracts chapter links and their titles from a series URL.
 
 - **`download_images_from_chapter(url, chapter_number)`**  
-    Télécharge les images d'un chapitre et les sauvegarde dans un dossier dédié.
+    Downloads the images of a chapter and saves them in a dedicated folder.
 
 - **`create_cbz_from_directory(directory_name)`**  
-    Crée un fichier CBZ à partir des images d'un dossier.
+    Creates a CBZ file from the images in a folder.
 
-### Flux principal
+### Main Flow
 
-1. L'utilisateur fournit une URL de série.
-2. Les chapitres sont extraits et téléchargés.
-3. Les images sont converties en fichiers CBZ.
+1. The user provides a series URL.
+2. Chapters are extracted and downloaded.
+3. Images are converted into CBZ files.
 
-## Avertissements
+## Warnings
 
-- Ce script est conçu pour un usage personnel uniquement. Assurez-vous de respecter les conditions d'utilisation du site Bato.to.
-- Les performances peuvent varier en fonction de la taille des chapitres et de la vitesse de votre connexion Internet.
+- This script is intended for personal use only. Make sure to comply with Bato.to's terms of service.
+- Performance may vary depending on chapter size and your internet connection speed.
 
 ## Contribution
 
-Les contributions sont les bienvenues ! N'hésitez pas à ouvrir une issue ou une pull request pour améliorer ce projet.
+Contributions are welcome! Feel free to open an issue or a pull request to improve this project.
 
-## Licence
+## License
 
-Ce projet est sous licence MIT. Consultez le fichier `LICENSE` pour plus d'informations.  
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
