@@ -52,7 +52,7 @@ def create_cbz_from_directory(directory_name):
     if not os.path.exists("cbz"):
         os.makedirs("cbz")
     
-    cbz_filename = f"{cbz}/{directory_name}.cbz"
+    cbz_filename = f"cbz/{directory_name}.cbz"
     with zipfile.ZipFile(cbz_filename, 'w') as cbz:
         for root, _, files in os.walk(directory_name):
             for file in sorted(files):
@@ -62,8 +62,11 @@ def create_cbz_from_directory(directory_name):
     print(f"CBZ file '{cbz_filename}' created successfully.")
 
 
+series_url = input("Veuillez entrer l'URL de la série à télécharger (laisser vide pour l'URL par défaut) : ").strip()
+if not series_url:
+    exit(0)
 
-chapters = extract_href_and_b_content("")
+chapters = extract_href_and_b_content(series_url)
 for item in chapters:
     href = item[0]
     b_content = item[1].replace("Chapter ", "")
